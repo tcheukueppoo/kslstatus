@@ -65,15 +65,12 @@ static const char unknown_str[] = "<>";
  */
 static const struct arg args[] = {
 	/* function		  format					argument */
-	/* { netspeed_rx,   "ns:%s-",					"eth0" }, */
-	/* { netspeed_tx,	 "%s ",						"eth0" }, */
-	{ cpu_perc,      " (cp:%s%%) ",				NULL },
-	{ run_command,	 " (vp:%s) ",					"amixer get Master | tail -1 | sed -n 's/.*\\[\\([0-9]\\+%\\)\\].*/\\1/p'" },
-	{ disk_perc,	 " (dp:%s%%) ",				"/" },
-	{ temp,          " (tp:%s°c) ",				"/sys/class/thermal/thermal_zone0/temp" },
-	{ ram_perc,      " (rp:%s%%) ",				NULL },
-	{ datetime,      " (dt:%s) ",					"%D" },
-	/* { run_command,   "%s[m] ",					"echo ' '"}, */
-	/* { run_command,   "%s[p] ",					"echo ' '"}, */
-	
+	{ cpu_perc,       "^v^^C2^ СПЮ:^t^%s%% ",   NULL },
+	{ ram_perc,       "^C3^ РАМ:^t^%s%% ",      NULL },
+	{ disk_perc,      "^C4^ ДИС:^t^%s%% ",      "/" },
+	{ battery_perc,   "^C5^ БАТ:^t^%s%% ",      "BAT1" },
+	{ temp,           "^C2^ ТЭМ:^t^%s°c ",      "/sys/class/thermal/thermal_zone0/temp" },
+	{ wifi_perc,      "^C6^ УыФ:^t^%s%% ",      "wlp7s0" },
+	{ datetime,       "^C1^ ДАТ:^t^%s ",        "%D" },
+	{ keymap,         "^C8^ ЛАы:^t^%s ",        "%D" },
 };
