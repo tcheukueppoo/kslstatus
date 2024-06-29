@@ -68,9 +68,9 @@ static const struct arg args[] = {
 	{ cpu_perc,       "^v^^C2^ СПЮ:^t^%s%% ",   NULL },
 	{ ram_perc,       "^C3^ РАМ:^t^%s%% ",      NULL },
 	{ disk_perc,      "^C4^ ДИС:^t^%s%% ",      "/" },
-	{ battery_perc,   "^C5^ БАТ:^t^%s%% ",      "BAT1" },
+	{ battery_perc,   "^C5^ БАТ:^t^%s%% ",      "BAT0" },
 	{ temp,           "^C2^ ТЭМ:^t^%s°c ",      "/sys/class/thermal/thermal_zone0/temp" },
-	{ wifi_perc,      "^C6^ УыФ:^t^%s%% ",      "wlp7s0" },
+	{ wifi_perc,      "^C6^ УыФ:^t^%s%% ",      "wlo1" },
 	{ datetime,       "^C1^ ДАТ:^t^%s ",        "%D" },
-	{ keymap,         "^C8^ ЛАы:^t^%s ",        "%D" },
+	{ keymap,         "^C8^ ЛАы:^t^%s \x01[T]", "%D" },
 };
